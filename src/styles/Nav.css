@@ -1,0 +1,77 @@
+.top-nav {
+  position: fixed;
+  top: 164px;
+  left: 24px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: center;
+  width: 120px; /* Match the badge width */
+}
+
+.nav-item {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--transition-base);
+  position: relative;
+  padding: 4px 0;
+  width: fit-content;
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+}
+
+.nav-item:focus {
+  outline: none;
+}
+
+/* Active state */
+.nav-item.active {
+  color: var(--text-primary);
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-primary);
+}
+
+/* Hover underline for non-active items */
+.nav-item:not(.active)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--text-primary);
+  transition: width var(--transition-base);
+}
+
+.nav-item:not(.active):hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .top-nav {
+    top: 128px;
+    left: 16px;
+    flex-direction: row;
+    gap: var(--spacing-lg);
+    width: auto;
+  }
+  
+  .nav-item {
+    font-size: var(--font-size-sm);
+  }
+}
+

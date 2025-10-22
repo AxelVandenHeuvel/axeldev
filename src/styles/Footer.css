@@ -1,0 +1,34 @@
+.footer {
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  margin-top: var(--spacing-2xl);
+}
+
+.footer-text {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.footer-subtext {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  margin-top: var(--spacing-xs);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .footer {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .footer-text {
+    font-size: 0.8rem;
+  }
+  
+  .footer-subtext {
+    font-size: 0.7rem;
+  }
+}
+

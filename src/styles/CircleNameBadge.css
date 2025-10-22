@@ -1,0 +1,78 @@
+.circle-badge-link {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 1000;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.circle-badge-link:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.circle-badge-link:focus {
+  outline: none;
+}
+
+.circle-badge {
+  width: 120px;
+  height: 120px;
+  color: var(--text-secondary);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Animate rotation on hover */
+.circle-badge-link:hover .circle-badge {
+  animation: rotateCircle 20s linear infinite;
+}
+
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circle-text {
+  fill: var(--text-secondary);
+  font-size: 8.8px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: var(--font-family);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .circle-badge-link:hover .circle-badge {
+    animation: none;
+  }
+  
+  .circle-badge-link:hover {
+    transform: none;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .circle-badge-link {
+    top: 16px;
+    left: 16px;
+  }
+  
+  .circle-badge {
+    width: 96px;
+    height: 96px;
+  }
+  
+  .circle-text {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+}
+
