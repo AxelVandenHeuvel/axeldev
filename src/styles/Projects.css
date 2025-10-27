@@ -70,6 +70,15 @@
   outline-offset: 4px;
 }
 
+/* Vaporwave Mode */
+.app.vaporwave-mode .project-card {
+  border-color: rgba(101, 184, 191, 0.4);
+}
+
+.app.vaporwave-mode .project-card:hover {
+  border-color: #65b8bf;
+}
+
 /* Responsive Design */
 @media (max-width: 640px) {
   .projects-page {

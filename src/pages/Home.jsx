@@ -2,10 +2,10 @@ import React from 'react'
 import ProfileCard from '../components/ProfileCard'
 import '../styles/Home.css'
 
-function Home() {
+function Home({ isVaporwaveMode }) {
   return (
     <div className="home-page">
-      <ProfileCard />
+      <ProfileCard isVaporwaveMode={isVaporwaveMode} />
     </div>
   )
 }

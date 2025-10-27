@@ -57,6 +57,22 @@
   color: var(--text-secondary);
 }
 
+/* Vaporwave Mode */
+.profile-section.vaporwave-mode .profile-name,
+.profile-section.vaporwave-mode .profile-subtitle,
+.profile-section.vaporwave-mode .profile-location span {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.profile-section.vaporwave-mode .profile-name {
+  line-height: 1.4;
+}
+
+.profile-section.vaporwave-mode .profile-image {
+  filter: none;
+}
+
 /* Responsive Design */
 @media (max-width: 640px) {
   .profile-image {

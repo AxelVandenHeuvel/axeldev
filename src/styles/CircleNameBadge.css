@@ -1,11 +1,10 @@
 .circle-badge-link {
-  position: fixed;
-  top: 24px;
-  left: 24px;
-  z-index: 1000;
+  position: relative;
   cursor: pointer;
   text-decoration: none;
   transition: transform var(--transition-base), opacity var(--transition-base);
+  display: flex;
+  justify-content: center;
 }
 
 .circle-badge-link:hover {
@@ -59,12 +58,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 640px) {
-  .circle-badge-link {
-    top: 16px;
-    left: 16px;
-  }
-  
+@media (max-width: 968px) {
   .circle-badge {
     width: 96px;
     height: 96px;

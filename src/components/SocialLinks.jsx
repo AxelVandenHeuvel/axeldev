@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/SocialLinks.css'
 
-function SocialLinks() {
+function SocialLinks({ isVaporwaveMode }) {
   const socialLinks = [
     {
       name: 'GitHub',
@@ -35,10 +35,12 @@ function SocialLinks() {
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="social-link"
+          className={`social-link ${isVaporwaveMode ? 'vaporwave-mode' : ''}`}
         >
           <span className="social-icon">{link.icon}</span>
-          <span className="social-username">{link.username}</span>
+          <span className="social-username">
+            {isVaporwaveMode ? link.username.split('').join(' ') : link.username}
+          </span>
         </a>
       ))}
     </div>

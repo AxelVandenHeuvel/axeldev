@@ -40,6 +40,21 @@
   font-size: var(--font-size-sm);
 }
 
+/* Vaporwave Mode */
+.social-link.vaporwave-mode {
+  border-color: rgba(101, 184, 191, 0.3);
+}
+
+.social-link.vaporwave-mode:hover {
+  background-color: rgba(101, 184, 191, 0.1);
+  border-color: #65b8bf;
+}
+
+.social-link.vaporwave-mode .social-username {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
 /* Responsive Design */
 @media (max-width: 640px) {
   .social-links {

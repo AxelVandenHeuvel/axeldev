@@ -127,6 +127,29 @@
   outline-offset: 4px;
 }
 
+/* Vaporwave Mode */
+.app.vaporwave-mode .skill-tag {
+  border-color: rgba(101, 184, 191, 0.4);
+}
+
+.app.vaporwave-mode .skill-tag:hover {
+  border-color: #65b8bf;
+  background-color: rgba(101, 184, 191, 0.1);
+}
+
+.app.vaporwave-mode .resume-section {
+  border-bottom-color: rgba(101, 184, 191, 0.3);
+}
+
+.app.vaporwave-mode .download-button {
+  border-color: rgba(101, 184, 191, 0.4);
+}
+
+.app.vaporwave-mode .download-button:hover {
+  border-color: #65b8bf;
+  background-color: rgba(101, 184, 191, 0.1);
+}
+
 /* Responsive Design */
 @media (max-width: 640px) {
   .resume-page {

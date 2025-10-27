@@ -2,21 +2,32 @@ import React from 'react'
 import SocialLinks from './SocialLinks'
 import '../styles/ProfileCard.css'
 import profileImage from '../../images/profile.jpeg'
+import vaporwaveProfile from '../../images/vaporwavepro.png'
 
-function ProfileCard() {
+function ProfileCard({ isVaporwaveMode }) {
   return (
-    <section id="home" className="profile-section">
+    <section id="home" className={`profile-section ${isVaporwaveMode ? 'vaporwave-mode' : ''}`}>
       <div className="profile-card">
         <div className="profile-image-container">
           <img 
-            src={profileImage} 
+            src={isVaporwaveMode ? vaporwaveProfile : profileImage} 
             alt="Profile" 
             className="profile-image"
           />
         </div>
         
-        <h1 className="profile-name">Axel VandenHeuvel</h1>
-        <p className="profile-subtitle">Developer</p>
+        <h1 className="profile-name">
+          {isVaporwaveMode ? (
+            <>
+              A X E L<br />V A N D E N H E U V E L
+            </>
+          ) : (
+            "Axel VandenHeuvel"
+          )}
+        </h1>
+        <p className="profile-subtitle">
+          {isVaporwaveMode ? "D E V E L O P E R" : "Developer"}
+        </p>
         
         <div className="profile-location">
           <svg 
@@ -32,10 +43,10 @@ function ProfileCard() {
               fill="currentColor"
             />
           </svg>
-          <span>Boulder, CO</span>
+          <span>{isVaporwaveMode ? "B O U L D E R ,   C O" : "Boulder, CO"}</span>
         </div>
         
-        <SocialLinks />
+        <SocialLinks isVaporwaveMode={isVaporwaveMode} />
       </div>
     </section>
   )
